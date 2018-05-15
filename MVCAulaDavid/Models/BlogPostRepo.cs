@@ -22,7 +22,7 @@ namespace MVCAulaDavid.Models
 
         private BlogPostRepo()
         {
-            blogPostsList.Add(new BlogPost(1, "Titulo 1", "Content 10", new DateTime(2018, 05, 09), "Author1"));
+            blogPostsList.Add(new BlogPost(1, "Titulo 1", "Content 1", new DateTime(2018, 05, 09), "Author1"));
             blogPostsList.Add(new BlogPost(2, "Titulo 2", "Content 2", new DateTime(2018, 05, 09), "Author2"));
             blogPostsList.Add(new BlogPost(3, "Titulo 3", "Content 3", new DateTime(2018, 05, 09), "Author1"));
             blogPostsList.Add(new BlogPost(4, "Titulo 4", "Content 4", new DateTime(2018, 05, 09), "Tripeiro Campeão"));
