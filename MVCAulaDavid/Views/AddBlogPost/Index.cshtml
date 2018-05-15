@@ -1,0 +1,23 @@
+﻿
+
+<h2>@ViewData["AuthorName"]</h2>
+
+<form action="/AddBlogPost/Add" method="post" onclick="verifyInputs(this)">
+    <input type="text" name="ID" />
+    <input type="text" name="Title" />
+    <input type="text" name="Content" />
+    <input type="date" name="CreateDate" />
+    <input type="submit" value="submit" />
+    <input type="hidden" name="AuthorName" value="@ViewData["AuthorName"]" />
+</form>
+
+<script>
+    function verifyInputs(element) {
+        $(element).children().each(function () {
+            if ($(this).val() == "") {
+                event.preventDefault();
+                alert("Not all fields are with input");
+            }
+        });
+    }
+</script>

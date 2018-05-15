@@ -1,0 +1,35 @@
+﻿@model IEnumerable<MVCAulaDavid.Models.BlogPost>
+
+<table style="width:100%">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Create Date</th>
+        <th>Author</th>
+    </tr>
+    @foreach (MVCAulaDavid.Models.BlogPost blogPost in Model)
+    {
+    <tr>
+        <td>@blogPost.ID</td>
+        <td>@blogPost.Title</td>
+        <td>@blogPost.Content</td>
+        <td>@blogPost.CreatDate.Date</td>
+        <td>@blogPost.Author</td>
+    </tr>
+    }
+    
+</table>
+
+Show posts from author:
+<form action="/ShowBlogPosts/Index" method="post">
+    <input type="text" name="AuthorName" />
+    <input type="submit" value="Enviar" />
+</form>
+
+Create new post:
+<form action="/AddBlogPost/Index" method="post">
+    <input type="text" name="AuthorName" />
+    <input type="submit" value="Enviar" />
+</form>
+
